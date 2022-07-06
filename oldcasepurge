@@ -1,9 +1,6 @@
 #!/bin/bash
 ##########################################
-# If you share this I'm coming after you
-# You know who you are
 # + I don't know you
-# + ratio
 ##########################################
 
 ### ## # == = - [ Color Fun ] - = == # ## ###
@@ -71,8 +68,6 @@ oldPurge(){
         oldList | while read oldDir
         do
             printf "${red}[REMOVING] $oldDir${normal}\n"
-            # I've temporarily commented out the "find" that deletes, and replaced it with a sanity check "echo" for now. If you find that you like what this does then please feel free to swap them out.
-            # echo 'find $oldDir -type f -delete && find $oldDir -type d -delete && printf "${yellow}[REMOVED] $oldDir${normal}\n\n"'
             find $oldDir -type f -delete && find $oldDir -type d -delete && printf "${yellow}[REMOVED] $oldDir${normal}\n\n"
         done
     fi
